@@ -219,6 +219,13 @@
             .scrolly-stage{height:auto;}
             .scrolly-sticky{position:relative;height:auto;display:block;}
         }
+
+        /* ── AMP DEMO VIDEO ── */
+        .amp-demo{padding:72px 52px 0;max-width:1280px;margin:0 auto;position:relative;z-index:2;}
+        .amp-demo-wrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--border);background:rgba(6,3,1,.82);aspect-ratio:16/9;box-shadow:0 30px 80px -30px rgba(0,0,0,.7);}
+        .amp-demo-wrap::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(208,69,0,.12),transparent 45%,transparent 55%,rgba(208,69,0,.08));mix-blend-mode:screen;z-index:2;}
+        .amp-demo-video{width:100%;height:100%;display:block;object-fit:cover;position:relative;z-index:1;}
+        @media (max-width:900px){.amp-demo{padding:56px 20px 0;}}
     </style>
 </head>
 <body>
@@ -263,6 +270,15 @@
         <span class="badge" role="listitem">Test-driven</span>
         <span class="badge" role="listitem">Rollback safety</span>
         <span class="badge" role="listitem">Full audit trail</span>
+    </div>
+</section>
+
+<!-- AMP PRODUCT DEMO -->
+<section class="amp-demo" aria-label="Agentic Migration Platform demo video" data-reveal>
+    <div class="amp-demo-wrap">
+        <video class="amp-demo-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Agentic Migration Platform demo video">
+            <source src="assets/amp-demo.webm" type="video/webm">
+        </video>
     </div>
 </section>
 
