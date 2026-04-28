@@ -179,8 +179,8 @@
         .ticker-inner{display:flex;align-items:center;padding:20px 0 20px 150px;animation:tick 44s linear infinite;width:max-content;}
         .ticker-inner:hover{animation-play-state:paused;}
         @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-        .ticker-client{display:flex;align-items:center;gap:12px;padding:0 40px;border-right:1px solid var(--border);flex-shrink:0;opacity:.32;transition:opacity .28s;cursor:default;}
-        .ticker-client:hover{opacity:.68;}
+        .ticker-client{display:flex;align-items:center;gap:12px;padding:0 40px;border-right:1px solid var(--border);flex-shrink:0;opacity:.78;transition:opacity .28s;cursor:default;}
+        .ticker-client:hover{opacity:1;}
         .client-logo-img{height:26px;width:auto;max-width:110px;object-fit:contain;display:block;filter:brightness(0) invert(1);}
         /* SECTION */
         .sw{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:100px 52px;}
@@ -274,9 +274,9 @@
         .aud-cta-btn{display:inline-flex;align-items:center;gap:10px;}
         /* CTA */
         .cta-wrap{position:relative;z-index:2;padding:0 52px;margin-top:80px;margin-bottom:80px;}
-        .cta-box{border-radius:28px;padding:80px 60px;text-align:center;background:rgba(6,3,1,.82);backdrop-filter:blur(36px) saturate(150%);-webkit-backdrop-filter:blur(36px) saturate(150%);border:1px solid rgba(160,50,0,.18);position:relative;overflow:hidden;}
-        .cta-box::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:720px;height:360px;background:radial-gradient(ellipse,rgba(140,40,0,.12) 0%,transparent 70%);pointer-events:none;}
-        .cta-box::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(190,65,0,.5),transparent);}
+        .cta-box{border-radius:28px;padding:60px 50px;text-align:center;max-width:900px;margin:0 auto;background:rgba(8,4,2,.85);backdrop-filter:blur(36px) saturate(160%);-webkit-backdrop-filter:blur(36px) saturate(160%);border:1px solid rgba(232,96,16,.34);position:relative;overflow:hidden;box-shadow:0 24px 80px rgba(232,96,16,.18),inset 0 1px 0 rgba(255,255,255,.10);}
+        .cta-box::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:920px;height:520px;background:radial-gradient(ellipse,rgba(232,96,16,.26) 0%,rgba(140,40,0,.10) 45%,transparent 75%);pointer-events:none;}
+        .cta-box::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,120,32,.7),transparent);}
         .cta-flame{display:flex;justify-content:center;margin-bottom:28px;}
         .cta-box h2{font-family:'Outfit',sans-serif;font-size:clamp(32px,4.2vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.07;margin-bottom:16px;text-wrap:balance;position:relative;}
         .cta-box .lead{font-size:clamp(15px,1.6vw,18px);color:var(--muted-hi);margin-bottom:44px;font-weight:300;letter-spacing:-.1px;position:relative;}
@@ -518,9 +518,7 @@
     <div class="ticker-inner">
         <div class="ticker-client"><img src="assets/clients/porsche.png" alt="Porsche" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/adidas.png" alt="Adidas" class="client-logo-img"></div>
-        <div class="ticker-client"><img src="assets/clients/datev.png" alt="DATEV" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/dekra.png" alt="DEKRA" class="client-logo-img"></div>
-        <div class="ticker-client"><img src="assets/clients/dm.png" alt="dm" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/cybex.png" alt="Cybex" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/mentalport.png" alt="Mentalport" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/copernicus.png" alt="Copernicus" class="client-logo-img"></div>
@@ -531,9 +529,7 @@
         <div class="ticker-client"><img src="assets/clients/tcc.png" alt="TCC" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/porsche.png" alt="Porsche" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/adidas.png" alt="Adidas" class="client-logo-img"></div>
-        <div class="ticker-client"><img src="assets/clients/datev.png" alt="DATEV" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/dekra.png" alt="DEKRA" class="client-logo-img"></div>
-        <div class="ticker-client"><img src="assets/clients/dm.png" alt="dm" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/cybex.png" alt="Cybex" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/mentalport.png" alt="Mentalport" class="client-logo-img"></div>
         <div class="ticker-client"><img src="assets/clients/copernicus.png" alt="Copernicus" class="client-logo-img"></div>
@@ -716,7 +712,7 @@
 <div class="cta-wrap" data-reveal id="kontakt">
     <div class="cta-box">
         <div class="cta-flame">
-            <img src="assets/forge-wordmark-glow.png" alt="arconsis Forge" style="height:140px;width:auto;display:block;filter:drop-shadow(0 0 60px rgba(232,96,16,.45));">
+            <img src="assets/forge-wordmark-glow.png" alt="arconsis Forge" style="height:180px;width:auto;display:block;filter:drop-shadow(0 0 70px rgba(232,96,16,.55));">
         </div>
         <h2>We deliver. Our agents work with you.</h2>
         <p class="lead">Talk to us about what hybrid teams can do for your organization.</p>
