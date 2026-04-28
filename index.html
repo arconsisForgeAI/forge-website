@@ -181,15 +181,15 @@
         .sec-sub{font-size:clamp(15px,1.5vw,17px);color:var(--muted-hi);line-height:1.82;font-weight:300;max-width:500px;margin-top:14px;margin-bottom:58px;letter-spacing:-.1px;}
         /* GLASS CARD */
         .gc{
-            background:linear-gradient(155deg,rgba(38,22,10,.92) 0%,rgba(18,10,5,.86) 50%,rgba(10,5,2,.82) 100%);
-            backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);
-            border:1px solid rgba(255,255,255,.11);border-radius:20px;position:relative;overflow:hidden;
-            box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 6px 24px rgba(0,0,0,.55);
+            background:linear-gradient(160deg,rgba(78,32,8,.95) 0%,rgba(42,18,6,.92) 38%,rgba(16,8,3,.88) 100%);
+            backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);
+            border:1px solid rgba(232,96,16,.22);border-radius:20px;position:relative;overflow:hidden;
+            box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 0 0 1px rgba(255,120,32,.04),0 8px 28px rgba(0,0,0,.6);
             transition:transform .38s var(--ease),border-color .3s,box-shadow .38s var(--ease);
         }
-        .gc::before{content:'';position:absolute;top:0;left:0;right:0;height:36%;background:linear-gradient(180deg,rgba(255,255,255,.05) 0%,transparent 100%);pointer-events:none;border-radius:20px 20px 0 0;}
-        .gc::after{content:'';position:absolute;bottom:-55px;left:50%;transform:translateX(-50%);width:78%;height:100px;background:radial-gradient(ellipse,rgba(160,50,0,.32) 0%,transparent 70%);opacity:0;transition:opacity .38s;pointer-events:none;}
-        .gc:hover{border-color:rgba(232,96,16,.42);box-shadow:0 18px 60px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.08),inset 0 0 36px rgba(140,40,0,.08);transform:translateY(-3px);}
+        .gc::before{content:'';position:absolute;top:0;left:0;right:0;height:46%;background:linear-gradient(180deg,rgba(255,140,50,.10) 0%,transparent 100%);pointer-events:none;border-radius:20px 20px 0 0;}
+        .gc::after{content:'';position:absolute;bottom:-55px;left:50%;transform:translateX(-50%);width:78%;height:100px;background:radial-gradient(ellipse,rgba(232,96,16,.42) 0%,transparent 70%);opacity:0;transition:opacity .38s;pointer-events:none;}
+        .gc:hover{border-color:rgba(255,120,32,.55);box-shadow:0 22px 70px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 50px rgba(232,96,16,.10);transform:translateY(-3px);}
         .gc:hover::after{opacity:1;}
         /* BENTO */
         .bento{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
@@ -230,21 +230,21 @@
         .process-step p{font-size:14px;color:var(--muted);line-height:1.78;font-weight:400;}
         /* APART */
         .apart-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-        .apart-item{padding:28px 26px;background:linear-gradient(155deg,rgba(34,20,10,.85) 0%,rgba(14,8,4,.78) 100%);border:1px solid rgba(255,255,255,.10);border-radius:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05);transition:background .3s,border-color .3s,transform .3s var(--ease);cursor:default;}
-        .apart-item:hover{background:rgba(140,40,0,.06);border-color:rgba(190,65,0,.25);transform:translateX(3px);}
+        .apart-item{padding:28px 26px;background:linear-gradient(160deg,rgba(72,30,8,.92) 0%,rgba(38,16,5,.88) 45%,rgba(14,7,3,.84) 100%);border:1px solid rgba(232,96,16,.22);border-radius:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 6px 22px rgba(0,0,0,.55);transition:background .3s,border-color .3s,transform .3s var(--ease),box-shadow .3s;cursor:default;position:relative;overflow:hidden;}
+        .apart-item::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(255,140,50,.10) 0%,transparent 100%);pointer-events:none;}
+        .apart-item:hover{border-color:rgba(255,120,32,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 14px 40px rgba(0,0,0,.7),inset 0 0 30px rgba(232,96,16,.10);transform:translateX(3px);}
         .apart-body h3{font-family:'Outfit',sans-serif;font-size:15.5px;font-weight:700;letter-spacing:-.3px;margin-bottom:7px;}
         .apart-body p{font-size:13.5px;color:var(--muted);line-height:1.72;font-weight:400;}
         /* LEISTUNGEN */
         .svc-list{display:flex;flex-direction:column;gap:3px;}
-        .svc-row{display:flex;align-items:center;padding:22px 28px;border:1px solid rgba(255,255,255,.10);border-radius:14px;background:linear-gradient(155deg,rgba(34,20,10,.85) 0%,rgba(14,8,4,.78) 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);transition:background .28s,border-color .28s,transform .28s var(--ease);cursor:default;position:relative;overflow:hidden;}
-        .svc-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(140,40,0,.10),transparent);transition:width .4s var(--ease);}
-        .svc-row:hover{border-color:rgba(190,65,0,.24);transform:translateX(2px);}
-        .svc-row:hover::before{width:100%;}
-        .svc-row:hover .svc-arrow{transform:translateX(5px);color:var(--fire-glow);}
-        .svc-num{font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--fire-mid);min-width:38px;}
-        .svc-div{width:1px;height:18px;background:var(--border);margin:0 22px;}
+        .svc-row{display:flex;align-items:center;padding:22px 30px 22px 36px;border:1px solid rgba(232,96,16,.22);border-radius:14px;background:linear-gradient(160deg,rgba(72,30,8,.92) 0%,rgba(38,16,5,.88) 45%,rgba(14,7,3,.84) 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 6px 22px rgba(0,0,0,.5);transition:background .28s,border-color .28s,transform .28s var(--ease),box-shadow .3s;cursor:default;position:relative;overflow:hidden;}
+        .svc-row::before{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;background:linear-gradient(180deg,var(--fire-deep),var(--fire-glow),var(--fire-bright));box-shadow:0 0 10px rgba(232,96,16,.55);transition:box-shadow .3s,width .28s;}
+        .svc-row::after{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(255,140,50,.08) 0%,transparent 100%);pointer-events:none;}
+        .svc-row:hover{border-color:rgba(255,120,32,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 14px 40px rgba(0,0,0,.65),inset 0 0 30px rgba(232,96,16,.10);transform:translateX(3px);}
+        .svc-row:hover::before{width:5px;box-shadow:0 0 18px rgba(255,120,32,.85);}
+        .svc-row:hover .svc-arrow{transform:translateX(6px);color:var(--fire-bright);}
         .svc-name{font-family:'Outfit',sans-serif;font-size:16px;font-weight:600;flex:1;letter-spacing:-.3px;}
-        .svc-arrow{font-size:15px;color:var(--muted);transition:transform .28s var(--ease),color .28s;}
+        .svc-arrow{font-size:18px;color:var(--fire-glow);transition:transform .28s var(--ease),color .28s;line-height:1;}
         /* PRODUKTE */
         .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
         .prod-card{padding:36px 28px 32px;display:flex;flex-direction:column;}
@@ -478,7 +478,7 @@
 <main id="main-content">
 <section class="hero" id="hero">
     <div class="hero-left">
-        <div class="brand-wordmark" style="animation:fadeUp .65s cubic-bezier(0.16,1,0.3,1) 0s both;margin-bottom:22px;width:fit-content;">
+        <div class="brand-wordmark" style="animation:fadeUp .65s cubic-bezier(0.16,1,0.3,1) 0s both;margin-bottom:6px;width:fit-content;">
             <img src="assets/forge-wordmark.png" alt="arconsis Forge" style="height:96px;width:auto;display:block;">
         </div>
         <p class="hero-parent">Part of the <a href="https://arconsis.com" target="_blank" rel="noopener noreferrer" class="hero-parent-link" aria-label="arconsis Group (opens in new tab)">arconsis Group</a></p>
@@ -676,10 +676,10 @@
     <h2 class="sec-h2" data-reveal data-d="1">Our services</h2>
     <p class="sec-sub" data-reveal data-d="2">Four core services. Built for enterprise, delivered with accountability.</p>
     <div class="svc-list">
-        <div class="svc-row" data-reveal><span class="svc-num">01</span><div class="svc-div"></div><span class="svc-name">Agent Engineering and AgentOps</span><span class="svc-arrow">→</span></div>
-        <div class="svc-row" data-reveal data-d="1"><span class="svc-num">02</span><div class="svc-div"></div><span class="svc-name">Hybrid Team as a Service</span><span class="svc-arrow">→</span></div>
-        <div class="svc-row" data-reveal data-d="2"><span class="svc-num">03</span><div class="svc-div"></div><span class="svc-name">AI and Agent Readiness Assessments</span><span class="svc-arrow">→</span></div>
-        <div class="svc-row" data-reveal data-d="3"><span class="svc-num">04</span><div class="svc-div"></div><span class="svc-name">Outcome-based Delivery Models</span><span class="svc-arrow">→</span></div>
+        <div class="svc-row" data-reveal><span class="svc-name">Agent Engineering and AgentOps</span><span class="svc-arrow" aria-hidden="true">→</span></div>
+        <div class="svc-row" data-reveal data-d="1"><span class="svc-name">Hybrid Team as a Service</span><span class="svc-arrow" aria-hidden="true">→</span></div>
+        <div class="svc-row" data-reveal data-d="2"><span class="svc-name">AI and Agent Readiness Assessments</span><span class="svc-arrow" aria-hidden="true">→</span></div>
+        <div class="svc-row" data-reveal data-d="3"><span class="svc-name">Outcome-based Delivery Models</span><span class="svc-arrow" aria-hidden="true">→</span></div>
     </div>
 </section>
 
