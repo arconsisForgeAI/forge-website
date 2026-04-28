@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      // Don't restore scroll on reload, and clear stale anchors so visitors land at the top
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (location.hash === '#main-content') history.replaceState(null, '', location.pathname + location.search);
+    </script>
     <title>arconsis Forge · Hybrid Teams. Agent Engineering. Real Delivery.</title>
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
