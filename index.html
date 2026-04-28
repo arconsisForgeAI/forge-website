@@ -361,27 +361,28 @@
         /* Produktkarten: 3D Inner-Layer Parallax + stärkerer Glow.
            Die Rotation läuft auf .prod-inner (eigener preserve-3d-Kontext).
            Damit wird die 3D-Bühne nicht durch backdrop-filter/overflow der .gc-Shell flachgedrückt. */
-        .prod-grid{perspective:1600px;}
-        .prod-card{
+        .prod-grid,.bento{perspective:1600px;}
+        .prod-card,.bento-card{
             overflow:visible;
             will-change:transform;
             transition:transform .14s linear,box-shadow .4s ease;
         }
-        .prod-card .prod-glow{
+        .prod-card .prod-glow,.bento-card .prod-glow{
             position:absolute;inset:0;border-radius:inherit;
             pointer-events:none;opacity:0;transition:opacity .4s ease;z-index:3;
             background:radial-gradient(340px circle at var(--gx,50%) var(--gy,50%),rgba(255,120,32,.32),transparent 55%);
         }
-        .prod-card:hover .prod-glow{opacity:1;}
+        .prod-card:hover .prod-glow,.bento-card:hover .prod-glow{opacity:1;}
         .prod-card:hover{box-shadow:0 40px 90px -30px rgba(217,72,0,.45);}
-        .prod-card .prod-inner{
+        .bento-card:hover{box-shadow:0 30px 70px -28px rgba(217,72,0,.4);}
+        .prod-card .prod-inner,.bento-card .prod-inner{
             position:relative;
             display:flex;flex-direction:column;height:100%;
             transform-style:preserve-3d;
             transition:transform .14s linear;
             will-change:transform;
         }
-        .prod-card .prod-inner > *{
+        .prod-card .prod-inner > *,.bento-card .prod-inner > *{
             transition:transform .3s cubic-bezier(.2,.7,.2,1);
             will-change:transform;
         }
@@ -389,6 +390,9 @@
         .prod-card .prod-inner h3{transform:translateZ(50px);}
         .prod-card .prod-inner .prod-tags{transform:translateZ(34px);}
         .prod-card .prod-inner p{transform:translateZ(22px);}
+        .bento-card .prod-inner .do-icon{transform:translateZ(60px);}
+        .bento-card .prod-inner h3{transform:translateZ(40px);}
+        .bento-card .prod-inner p{transform:translateZ(22px);}
 
         /* Magnetic CTA Button */
         .magnetic-btn{transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease!important;will-change:transform;}
@@ -418,11 +422,11 @@
             .scrolly-sec{padding:40px 20px 0;}
             .scrolly-sticky{grid-template-columns:1fr;gap:40px;}
             .scrolly-visual{max-height:38vh;}
-            .prod-card > *{transform:none!important;}
+            .prod-card > *,.bento-card > *,.bento-card .prod-inner > *{transform:none!important;}
         }
         @media(prefers-reduced-motion:reduce){
-            .gc .gc-glow,.prod-card .prod-glow{display:none;}
-            .prod-card > *{transform:none!important;}
+            .gc .gc-glow,.prod-card .prod-glow,.bento-card .prod-glow{display:none;}
+            .prod-card > *,.bento-card > *,.bento-card .prod-inner > *{transform:none!important;}
             .scrolly-layer,.scroll-step{opacity:1!important;transform:none!important;}
             .scrolly-stage{height:auto;}
             .scrolly-sticky{position:relative;height:auto;display:block;}
@@ -540,23 +544,22 @@
     <p class="sec-sub" data-reveal data-d="2">From concept to live operations.</p>
     <div class="bento">
         <div class="gc bento-card tall" data-rs>
-            <div class="do-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(200,75,0,.85)" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="3"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42"/></svg></div>
+            <div class="do-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(232,96,16,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9.5 10.5h5M9.5 13.5h3"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M5 5l1.6 1.6M17.4 17.4 19 19M5 19l1.6-1.6M17.4 6.6 19 5"/></svg></div>
             <h3>Design and build agentic software systems</h3>
             <p>Intelligent, autonomous systems. Designed from the ground up, securely integrated and built for enterprise operations.</p>
         </div>
         <div class="gc bento-card" data-rs data-d="1">
-            <div class="do-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(200,75,0,.85)" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="10" r="2.5"/><circle cx="15" cy="5" r="2.5"/><circle cx="15" cy="15" r="2.5"/><path d="M7.5 10l5-5M7.5 10l5 5"/></svg></div>
+            <div class="do-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(232,96,16,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7" r="3"/><path d="M2.5 20.5v-.5a5.5 5.5 0 0 1 11 0v.5"/><rect x="14.5" y="11" width="7.5" height="7.5" rx="1.6"/><circle cx="16.7" cy="14.2" r=".8" fill="rgba(232,96,16,.95)" stroke="none"/><circle cx="19.8" cy="14.2" r=".8" fill="rgba(232,96,16,.95)" stroke="none"/><path d="M16.5 16.6h3.5"/><path d="M18.25 11v-1.4"/></svg></div>
             <h3>Roll out hybrid teams</h3>
             <p>Seamless integration of people and agents into productive, collaborative units.</p>
         </div>
         <div class="gc bento-card" data-rs data-d="2">
-            <div class="do-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(200,75,0,.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 11h7l-3 7 8-9h-7l3-7z"/></svg></div>
+            <div class="do-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(232,96,16,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.6"/><circle cx="19" cy="6" r="2.6"/><circle cx="12" cy="18" r="2.6"/><path d="M7.6 6h8.8M6.6 8.4 11 15.6M17.4 8.4 13 15.6"/></svg></div>
             <h3>Operate multi-agent workflows</h3>
             <p>Continuous optimization and scaling of complex agent orchestrations in live production.</p>
         </div>
         <div class="gc bento-card tall" data-rs data-d="3">
-            <div class="bento-tag">Outcome-based</div>
-            <div class="do-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(200,75,0,.85)" stroke-width="1.5" stroke-linecap="round"><path d="M3 14l4-4 3 3 7-8"/></svg></div>
+            <div class="do-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(232,96,16,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="13" r="9.5"/><circle cx="11" cy="13" r="5.5"/><circle cx="11" cy="13" r="1.6" fill="rgba(232,96,16,.95)" stroke="none"/><path d="m13.5 10.5 6.5-6.5"/><path d="M17 4h3v3"/></svg></div>
             <h3>Deliver software, features and processes</h3>
             <p>Outcome-driven delivery with measurable results. Compensated partly on real outcomes. Not just consulting.</p>
         </div>
@@ -775,12 +778,14 @@ document.addEventListener('mouseleave',()=>cg.style.opacity='0');
 (function a(){cx+=(tx-cx)*0.09;cy+=(ty-cy)*0.09;cg.style.left=cx+'px';cg.style.top=cy+'px';requestAnimationFrame(a);})();
 document.querySelectorAll('.gc').forEach(card=>{
     const isProd=card.classList.contains('prod-card');
+    const isBento=card.classList.contains('bento-card');
+    const has3D=isProd||isBento;
     // Glow-Layer einziehen (separate Divs, um nicht mit ::before/::after zu kollidieren)
     if(!card.querySelector(':scope > .gc-glow')){
         const g=document.createElement('div');g.className='gc-glow';g.setAttribute('aria-hidden','true');
         card.insertBefore(g,card.firstChild);
     }
-    if(isProd){
+    if(has3D){
         if(!card.querySelector(':scope > .prod-glow')){
             const g=document.createElement('div');g.className='prod-glow';g.setAttribute('aria-hidden','true');
             card.appendChild(g);
@@ -797,18 +802,21 @@ document.querySelectorAll('.gc').forEach(card=>{
             card.insertBefore(inner,glowEnd);
         }
     }
-    const inner=isProd?card.querySelector(':scope > .prod-inner'):null;
+    const inner=has3D?card.querySelector(':scope > .prod-inner'):null;
+    const tiltAmount=isProd?12:isBento?8:5;
+    const lift=isProd?-8:isBento?-6:-6;
+    const scale=isProd?1.015:isBento?1.012:1.01;
     card.addEventListener('mousemove',e=>{
         const r=card.getBoundingClientRect();
         const px=e.clientX-r.left,py=e.clientY-r.top;
         const x=px/r.width-.5,y=py/r.height-.5;
         card.style.setProperty('--mx',px+'px');
         card.style.setProperty('--my',py+'px');
-        if(isProd){
+        if(has3D){
             card.style.setProperty('--gx',px+'px');
             card.style.setProperty('--gy',py+'px');
-            card.style.transform=`translateY(-8px) scale(1.015)`;
-            if(inner) inner.style.transform=`rotateX(${-y*12}deg) rotateY(${x*12}deg)`;
+            card.style.transform=`translateY(${lift}px) scale(${scale})`;
+            if(inner) inner.style.transform=`rotateX(${-y*tiltAmount}deg) rotateY(${x*tiltAmount}deg)`;
         } else {
             card.style.transform=`translateY(-6px) scale(1.01) rotateX(${-y*5}deg) rotateY(${x*5}deg)`;
         }
