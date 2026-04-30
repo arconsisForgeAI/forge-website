@@ -440,6 +440,13 @@
             .scrolly-stage{height:auto;}
             .scrolly-sticky{position:relative;height:auto;display:block;}
         }
+        /* MEET SPARK */
+        .spark-meet{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center;margin-top:36px;}
+        .spark-meet-img{display:flex;justify-content:center;align-items:center;}
+        .spark-meet-img img{width:100%;max-width:380px;height:auto;display:block;filter:drop-shadow(0 0 80px rgba(232,96,16,.30)) drop-shadow(0 0 30px rgba(208,68,0,.35));}
+        .spark-meet-text p{font-size:17px;line-height:1.75;color:var(--muted-hi);max-width:520px;margin-bottom:18px;font-weight:300;}
+        .spark-meet-text p:last-child{margin-bottom:0;}
+        @media (max-width:760px){.spark-meet{grid-template-columns:1fr;gap:28px;}.spark-meet-img img{max-width:280px;}}
     </style>
 </head>
 <body>
@@ -670,6 +677,24 @@
         <div class="apart-item" data-reveal data-d="1"><div class="apart-body"><h3>Full transparency instead of black box</h3><p>Every step traceable. No hidden processes, no magic.</p></div></div>
         <div class="apart-item" data-reveal data-d="2"><div class="apart-body"><h3>Compensation tied to outcomes</h3><p>Aligned incentives: we earn when you see real business value.</p></div></div>
         <div class="apart-item" data-reveal data-d="3"><div class="apart-body"><h3>Enterprise ready: governance, security, accountability</h3><p>Production-grade standards and regulatory compliance from day one.</p></div></div>
+    </div>
+</section>
+
+<hr class="hr">
+
+<!-- MEET SPARK -->
+<section class="sw" id="meet-spark" aria-label="Meet Spark">
+    <span class="eyebrow" data-reveal>Our agent</span>
+    <h2 class="sec-h2" data-reveal data-d="1">Meet Spark.</h2>
+    <p class="sec-sub" data-reveal data-d="2">The first agent we forged. Calm. Precise. Built for production from day one.</p>
+    <div class="spark-meet">
+        <div class="spark-meet-img" data-reveal data-d="1">
+            <img src="assets/spark.png" alt="Spark, the arconsis Forge AI agent mascot. A humanoid robot wearing a leather forge apron with the Forge diamond flame emblem on his chest." loading="lazy">
+        </div>
+        <div class="spark-meet-text" data-reveal data-d="2">
+            <p>Spark inspects every step before it ships. Audit trails by default. Human-in-the-loop where it matters.</p>
+            <p>He is the first member of the hybrid teams we build. More agents follow, each forged for a specific role.</p>
+        </div>
     </div>
 </section>
 
