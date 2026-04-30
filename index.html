@@ -440,12 +440,13 @@
             .scrolly-stage{height:auto;}
             .scrolly-sticky{position:relative;height:auto;display:block;}
         }
-        /* WHAT WE DO — SPARK COMPANION */
-        .wwd-header{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;margin-bottom:32px;}
-        .wwd-header-text{min-width:0;}
-        .wwd-spark{flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-        .wwd-spark img{width:100%;max-width:260px;height:auto;display:block;filter:drop-shadow(0 0 60px rgba(232,96,16,.28)) drop-shadow(0 0 24px rgba(208,68,0,.32));}
-        @media (max-width:760px){.wwd-header{grid-template-columns:1fr;gap:24px;}.wwd-spark img{max-width:200px;margin:0 auto;}}
+        /* WHAT WE DO — SPARK BACKDROP */
+        #was-wir-tun{position:relative;}
+        .wwd-spark{position:absolute;top:-180px;right:24px;width:520px;z-index:0;pointer-events:none;animation:fadeUp 1s var(--ease) .2s both;}
+        .wwd-spark img{width:100%;height:auto;display:block;filter:drop-shadow(0 0 80px rgba(232,96,16,.32)) drop-shadow(0 0 30px rgba(208,68,0,.38));}
+        #was-wir-tun .sec-h2,#was-wir-tun .sec-sub,#was-wir-tun .bento{position:relative;z-index:1;}
+        @media (max-width:1100px){.wwd-spark{width:420px;top:-140px;right:0;opacity:.55;}}
+        @media (max-width:760px){.wwd-spark{display:none;}}
     </style>
 </head>
 <body>
@@ -551,15 +552,11 @@
 
 <!-- WAS WIR TUN -->
 <section class="sw" id="was-wir-tun" aria-label="What we do">
-    <div class="wwd-header">
-        <div class="wwd-header-text">
-            <h2 class="sec-h2" data-reveal data-d="1">What we do</h2>
-            <p class="sec-sub" data-reveal data-d="2">From concept to live operations.</p>
-        </div>
-        <div class="wwd-spark" data-reveal data-d="2">
-            <img src="assets/spark.png" alt="Spark, the arconsis Forge AI agent mascot. A humanoid robot wearing a leather forge apron with the Forge diamond flame emblem on his chest." loading="lazy">
-        </div>
+    <div class="wwd-spark" aria-hidden="true">
+        <img src="assets/spark.png" alt="" loading="lazy">
     </div>
+    <h2 class="sec-h2" data-reveal data-d="1">What we do</h2>
+    <p class="sec-sub" data-reveal data-d="2">From concept to live operations.</p>
     <div class="bento">
         <div class="gc bento-card tall" data-rs>
             <div class="do-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(232,96,16,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9.5 10.5h5M9.5 13.5h3"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M5 5l1.6 1.6M17.4 17.4 19 19M5 19l1.6-1.6M17.4 6.6 19 5"/></svg></div>
